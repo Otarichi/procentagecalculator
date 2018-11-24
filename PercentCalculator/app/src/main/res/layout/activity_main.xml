@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/result1TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="35dp"
+                android:gravity="center"
+                android:text="შედეგი"
+                android:textColor="@color/resultTextColor"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/result1TextView"
+                android:id="@+id/result2TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="..."
+                android:textColor="@color/colorAccent"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/result3TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/result2TextView"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/resultTextColor2"
+                android:textSize="20sp" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="რამდენია"
+                android:textSize="16sp" />
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/calculate1EditText1"
+                android:layout_width="80dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="ის"
+                android:textSize="16sp" />
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/calculate1EditText2"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:layout_width="80dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="%"
+                android:textSize="16sp" />
+        </LinearLayout>
+        
+        <FrameLayout
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:onClick="calculate1Click"
+                android:id="@+id/calculate1Button1"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="გამოთვლა" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/calculate2EditText1"
+                android:layout_width="80dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="ის რამდენი %-ია "
+                android:textSize="16sp" />
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/calculate2EditText2"
+                android:layout_width="80dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:onClick="calculate2Click"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="გამოთვლა" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="რა რიცხვის"
+                android:textSize="16sp" />
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/calculate3EditText1"
+                android:layout_width="80dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="%-ი არის"
+                android:textSize="16sp" />
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/calculate3EditText2"
+                android:layout_width="80dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/calculate3Button"
+                android:onClick="calculate3Click"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="გამოთვლა" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
